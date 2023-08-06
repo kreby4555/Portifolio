@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url(https://webenezer.com.br/wp-content/uploads/2017/08/fundo-portfolio-mobile-webenezer-1.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+.perfil {
+    width: 150px;
+    border: solid;
+    border-color: #000000;
+    border-radius: 75%;
+    margin: 10px 20px;
+}
+
+.buttons {
+    margin: 40px 0;
+    display: flex;
+    gap: 20px;
+}
+
+:root {
+    --cor-fundo: rgb(134, 134, 134);
+    --cor-hover: rgb(187, 187, 187);
+    --cor-primaria: rgb(255, 255, 255);
+}
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dp-menu ul {
+    background-color: var(--cor-fundo);
+}
+
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+}
+
+.dp-menu ul li a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+}
+
+.dp-menu ul li:hover ul {
+    background-color: var(--cor-hover);
+}
+
+/*sub menu*/
+.dp-menu ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+    display: block;
+}
+
+.dp-menu ul ul {
+    width: 150px
+}
+
+.dp-menu ul ul li a {
+    display: block;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 10px auto;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+button:active {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+    .container {
+        width: 90%; 
+    }
+    .perfil {
+        width: 100px;
+    }
+    h1 {
+        font-size: 30px; 
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .dp-menu ul li {
+        display: block;
+    }
+
+    .buttons {
+        flex-wrap: wrap; 
+    }
+
+    .dp-menu ul li ul li {
+        display: block;
+        margin: 5px 0; 
+        padding: 10px; 
+        z-index: 1;
+    }
+    
+    .dp-menu ul li ul li a {
+        font-size: 16px; 
+        background-color: gray;
+        color: #000000; 
+        text-decoration: none;
+    }
+    
+    .dp-menu ul li ul li:hover {
+        background-color: gray;
+    }
+}
